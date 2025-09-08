@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>g</title>
+    </head><body>
+        <button onclick="lp()">fetch</button>
+        <div id="pro"></div>
+   
+    <script>
+        function lp(){
+            fetch("a.php")
+            .then(res=>res.json())
+            .then(data=>{
+                document.getElementById("pro").innerHTML=
+                data.map(p=>`Name:${p.name},price:$${p.price}`).join("<br>");
+        });
+        }
+    </script>
+   </body>
+</html>
